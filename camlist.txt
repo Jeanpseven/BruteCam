@@ -1,0 +1,129 @@
+3xLogic,admin,12345
+3S Vision,root,root
+4XEM,root,
+ACTi,admin,123456
+ACTi,Admin,123456
+Amcrest,admin,admin
+American Dynamics,admin,admin
+American Dynamics,admin,9999
+Apexis,admin,123456
+Appro,admin,9999
+Aprica,admin,
+Arecont Vision, , 
+Arecont Vision,admin, 
+Arfo,admin,admin
+Arfo,admin,12345
+Asoni,admin,admin
+Asoni,admin,admin
+Avertmedia,admin,admin
+AvertX,admin,1234
+Avigilon,admin,admin
+Avigilon,administrator,
+AVTech,admin,admin
+Axis,root,root
+Intelbras VIP-1230W / VIP-1230DW,admin,123456789
+Intelbras MIBO,admin,admin
+Intellio,admin,admin
+Interlogix,admin,1234
+IOImage,admin,admin
+IPX-DDK,root,admin
+IPXA H264,Admin
+IPXA H265,admin,888888
+IPEYE,admin,123456
+IQinVision,root,system
+JTC,admin,123456
+JVC,admin,JVC
+JVC,admin,jvc
+LG,admin,admin
+Longse,admin,12345
+Linksys,admin,admin
+Logitech,root,1234
+Lorex,admin,admin
+LTS Security,admin,123456
+LTS,admin,12345
+LTS,admin,123456
+Luatek,admin,12345
+Matrixtech,admin,1111
+Merit Lilin,admin,pass
+Merit Lilin,admin,1111
+Messoa,admin,1234 ou Messoa
+Microdigital,root,root
+Micronet,root,pass
+Milesight,admin,ms1234
+MKA,admin
+Mobotix,admin,meinsm
+Motorola Security,admin,123456
+Northern,admin,12345
+Novicam,admin
+Oncam,admin,admin
+OpenEye,Admin,1234
+Panasonic,admin,password
+Panasonic,admin1,password
+Pelco,admin,admin
+Pixord,admin,admin
+Pixord,admin,admin
+Pixord,root,pass
+Polyvision,admin
+Planet,admin,admin
+PPA,admin,123456
+Provision ISR,admin,123456
+Proimage Brasil,adm,admin
+Proimage Brasil,admin,123456
+QSee,admin,admin
+QSee,admin,123456
+QVIS,Admin,1234
+Reolink,admin
+Rivatech,root,pass
+Samsung Electronics,root,root
+Samsung Electronics,admin,4321
+Samsung Electronics,admin,4321
+Samsung,root,root
+Samsung,root,4321
+Samsung,root,admin
+Samsung,admin,4321
+Samsung Techwin,admin,4321
+Samsung Techwin,admin,1111111
+Sanyo,admin,admin
+Scallop,admin,password
+See Max,admin,123456
+Sentry360,admin,1234
+Sony,admin,admin
+Space Technology,admin,12345
+Speco,root,root
+Speco,admin,admin
+Speco,admin,1234
+Stardot,admin,admin
+Starvedia,admin
+Sunell,admin,admin
+SV3C,admin,123456
+Swann,admin,12345
+Tecvoz,admin,admin
+Telexper,admin,99999999
+Tiandy,admin,admin
+Trendnet,admin,admin
+Uniview,root,uniview
+Uniview,admin,admin
+Urmet,root,admin
+Uvcd,admin,1111
+Vantage,admin,1234
+Vanderbilt,root,admin
+Vantage,root,vantage
+Videofied,admin,1234
+Videofied,root
+Videolarm,admin
+Videolarm,root
+Videoteknika,admin
+Vivotek,admin,12345
+Vivotek,admin,vivotek
+Vivotek,root,vivotek
+W Box Technologies,admin,admin
+W Box Technologies,admin,W Box Technologies
+Win4Net,admin,1234
+Wisenet,root,root
+Xvision,admin,admin
+Y-Cam,admin,1234
+Zavio,root,Zavio
+Zmodo,admin
+Zmodo,admin,Zmodo
+Zmodo,admin,zmodo
+ZyXEL,root,1234
