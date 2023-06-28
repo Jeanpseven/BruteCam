@@ -9,7 +9,7 @@ American Dynamics,admin,9999
 Apexis,admin,123456
 Appro,admin,9999
 Aprica,admin,
-Arecont Vision, , 
+Arecont Vision, 
 Arecont Vision,admin, 
 Arfo,admin,admin
 Arfo,admin,12345
@@ -50,11 +50,11 @@ Messoa,admin,1234 ou Messoa
 Microdigital,root,root
 Micronet,root,pass
 Milesight,admin,ms1234
-MKA,admin
+MKA,admin, 
 Mobotix,admin,meinsm
 Motorola Security,admin,123456
 Northern,admin,12345
-Novicam,admin
+Novicam,admin, 
 Oncam,admin,admin
 OpenEye,Admin,1234
 Panasonic,admin,password
@@ -72,7 +72,7 @@ Proimage Brasil,admin,123456
 QSee,admin,admin
 QSee,admin,123456
 QVIS,Admin,1234
-Reolink,admin
+Reolink,admin, 
 Rivatech,root,pass
 Samsung Electronics,root,root
 Samsung Electronics,admin,4321
@@ -93,7 +93,7 @@ Speco,root,root
 Speco,admin,admin
 Speco,admin,1234
 Stardot,admin,admin
-Starvedia,admin
+Starvedia,admin, 
 Sunell,admin,admin
 SV3C,admin,123456
 Swann,admin,12345
@@ -109,10 +109,10 @@ Vantage,admin,1234
 Vanderbilt,root,admin
 Vantage,root,vantage
 Videofied,admin,1234
-Videofied,root
-Videolarm,admin
-Videolarm,root
-Videoteknika,admin
+Videofied,root, 
+Videolarm,admin, 
+Videolarm,root, 
+Videoteknika,admin, 
 Vivotek,admin,12345
 Vivotek,admin,vivotek
 Vivotek,root,vivotek
@@ -123,7 +123,7 @@ Wisenet,root,root
 Xvision,admin,admin
 Y-Cam,admin,1234
 Zavio,root,Zavio
-Zmodo,admin
+Zmodo,admin, 
 Zmodo,admin,Zmodo
 Zmodo,admin,zmodo
 ZyXEL,root,1234
