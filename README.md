@@ -13,7 +13,7 @@ O Wannasee3 é um script Python que automatiza o processo de configuração de c
 - Verificação de credenciais de acesso às câmeras de segurança através de um arquivo de lista de credenciais.
 - Configuração automática de encaminhamento de portas no roteador para tornar as câmeras de segurança acessíveis pela Internet.
 - Obtenção automática das informações de configuração de rede, como endereço IP do roteador, nome de usuário e senha.
-- Salva IPs para você entrar depois com ponto de referência de localização
+- Salva IPs para você entrar depois com ponto de referência de localização e salva também usuario e senha para o login da camera
 
 ## Requisitos
 
