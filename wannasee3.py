@@ -18,7 +18,10 @@ def get_router_ip():
 
 # Função para obter o nome de usuário do roteador (assumindo que seja o mesmo que o nome de usuário do sistema)
 def get_router_username():
-    return os.getlogin()
+    process = subprocess.Popen(['whoami'], stdout=subprocess.PIPE)
+    output, _ = process.communicate()
+    router_username = output.decode().strip()
+    return router_username
 
 # Função para obter a senha do roteador (assumindo que seja a mesma senha do sistema)
 def get_router_password():
@@ -98,10 +101,9 @@ def testar_senhas(networks):
         for dispositivo in dispositivos_conectados:
             print(f"IP: {dispositivo['IP']} - MAC: {dispositivo['MAC']}")
 
-        # Salva o IP da câmera juntamente com o ponto de referência de localização em um arquivo
+        # Salva o IP, usuário e senha da câmera em um arquivo
         with open("lista_cameras.txt", "a") as file:
-            ponto_referencia = obter_ponto_referencia(dispositivos_conectados[0]['IP'])
-            file.write(f"IP: {dispositivos_conectados[0]['IP']} - Local: {ponto_referencia}\n")
+            file.write(f"IP: {dispositivos_conectados[0]['IP']} - Usuario: {user} - Senha: {password}\n")
 
         print("-------------------------------------------")
 
@@ -113,17 +115,6 @@ def obter_ponto_referencia(ip):
     else:
         return ""
 
-# Função para verificar se as dependências estão instaladas e instalar, se necessário
-def verificar_dependencias():
-    try:
-        import pywifi
-        import scapy
-        import paramiko
-        import nmap
-        import geocoder
-    except ImportError:
-        print("Instale as dependências necessárias antes de executar o script.")
-
 # Função para verificar as credenciais de acesso à câmera
 def check_credentials(manufacturer, user, password):
     with open('camlist.txt', 'r') as file:
@@ -133,13 +124,23 @@ def check_credentials(manufacturer, user, password):
                 return True
     return False
 
-# Read the camlist.txt file
-credentials = {}
-with open('camlist.txt', 'r') as file:
-    for line in file:
-        # Split the line into manufacturer, user, and password
-        manufacturer, user, password = line.strip().split(',')
-        credentials[manufacturer] = {"user": user, "password": password}
+# Obtém o endereço IP do roteador padrão
+router_ip = get_router_ip()
+
+# Obtém o nome de usuário do roteador
+router_username = get_router_username()
+
+# Obtém a senha do roteador
+router_password = get_router_password()
+
+# Obtém o endereço IP interno
+internal_ip = get_internal_ip()
+
+# Obtém a porta interna disponível
+internal_port = get_internal_port()
+
+# Obtém a porta da interface externa
+external_interface_port = get_external_interface_port()
 
 # Inicializa o objeto Wifi
 wifi = pywifi.PyWiFi()
