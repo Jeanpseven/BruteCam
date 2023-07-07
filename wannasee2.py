@@ -3,6 +3,45 @@ import paramiko
 import socket
 import subprocess
 
+def ascii():
+   print("""                                                    
+                                                    ..oooddddddoooo..           
+                                                oo$$$$$$$$$$$$$$$$$$$$$oo.      
+                                             d$$$$$$**°°         °°**$$$$$$o    
+                                              ?**°                     °°**     
+                                                      ..oooodoooo..             
+                                                  .d$$$$$$$$$$$$$$$$$oo         
+                                                  $$$$**°°     °°**$$$$P        
+                                                   °                 °          
+                                                           .o                   
+                                                       .o$$$$$.                 
+                                                    od$$$$$$$$$                 
+                                                 od$$$$$$$$$$*°ob               
+                                             .o$$$$$$$$$$*°.od$$$b              
+                                          od$$$$$$$$$$*°.d$$$$$$$$b             
+                                      .o$$$$$$$$$$$*.od$$$$$$$$$$$$b            
+                                   od$$$$$$$$$$*°.d$$$$$$$$$$$$$$$$$b           
+                               .o$$$$$$$$$$**.od$$$$$$$$$$$$$$$$$$$$$           
+                            od$$$$$$$$$$*°.d$$$$$$$$$$$$$$$$$$$$$$$$P           
+                         od$$$$$$$$$$*°od$$$$$$$$$$$$$$$$$$$$$$$$$$$            
+                     .o$$$$$$$$$$*°.od$$$$$$$$$$$$$$$$$$$$$$$$$$$$°             
+                  od$$$$$$$$$$*°.d$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*°               
+              .o$$$$$$$$$$*°.o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*°                   
+           od$$$$$$$$$$*°.d$$$$$$$$$$$$$$$$$$$$$$$$$$$$**                       
+       .o$$$$$$$$$$**.od$$$$$$$$$$$$$$$$$$$$$$$$$$$$*°                          
+    .d$$$$$$$$$$*°.o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$                            
+ od$$$$*******° d$$$$$$$$$$$$$$$$$$$$$$$$$$$$*$$$$$$                            
+             .o. *$$$$$$$$$$$$$$$$$$$$$$$$*°   °**$$$                           
+          o$$$$$$b °*$$$$$$$$$$$$$$$$$*°           $$$b                     $$$$
+           *$$$$$$$o. °?$$$$$$$$$$$*°               ?$$$                    $$$$
+             °*$$$$$$$o °*$$$$$*°                    ?$$$..             d$$$$$$$
+                *$$$$**    **°                        ?$$$$$b...........d$$$$$$$
+                  °°                                  d$$$$$$$$$$$$$$$$$$$$$$$$$
+                                                       $$$$$*°°°°°°°°°°°?$$$$$$$
+                                                                         ***$$$$
+                                                                            $$$$
+                                                                            $$$$""")
+
 # Function to check credentials for a specific manufacturer
 def check_credentials(manufacturer, user, password):
     with open('Jeanpseven/BruteCam/camlist.txt', 'r') as file:
@@ -21,6 +60,7 @@ with open('Jeanpseven/BruteCam/camlist.txt', 'r') as file:
         credentials[manufacturer] = {"user": user, "password": password}
 
 # Get the host from the user
+ascii()
 target_host = input("Enter the host (IP address or domain name) of the camera: ")
 
 # Scan the host and get the manufacturer information
