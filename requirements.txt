@@ -1,0 +1,5 @@
+pywifi
+scapy
+paramiko
+nmap
+geocoder
